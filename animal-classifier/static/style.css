@@ -1,0 +1,133 @@
+/* --- Global Styles --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Added more common sans-serif fallbacks */
+    background-color: #f0f2f5; /* Slightly softer background color, common in modern UIs */
+    color: #333; /* Default text color */
+    line-height: 1.6; /* Improves readability for text */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Using flexbox for easy centering of the container */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+}
+
+/* --- Container Styles --- */
+.container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.1); /* Slightly more pronounced shadow for depth */
+    padding: 40px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center; /* Centering content within the container */
+    box-sizing: border-box; /* Ensures padding doesn't increase the total width */
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+    color: #2c3e50; /* A darker, more professional heading color */
+    margin-bottom: 20px; /* Consistent spacing below headings */
+    text-align: center; /* Ensure headings are centered if not already */
+}
+
+h1 {
+    font-size: 2.5em; /* Larger for main title */
+    font-weight: 600; /* Slightly bolder */
+}
+
+h2 {
+    font-size: 1.8em;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+/* --- Button Styles --- */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 28px; /* Slightly more horizontal padding */
+    font-size: 17px; /* Slightly larger font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover transitions */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Subtle shadow for buttons */
+    margin: 10px 0; /* Add some margin for spacing if multiple buttons */
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+button:active {
+    background-color: #004085; /* Darker on click */
+    transform: translateY(0); /* Return to original position */
+}
+
+/* --- Input Styles (specifically for file input) --- */
+input[type="file"] {
+    font-size: 16px;
+    padding: 10px; /* Add some padding for better click area */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px;
+    background-color: #f8f8f8; /* Light background */
+    cursor: pointer;
+    margin-top: 15px; /* Spacing from elements above */
+    display: block; /* Ensures it takes its own line */
+    margin-left: auto; /* Center the input if it's display block */
+    margin-right: auto; /* Center the input if it's display block */
+}
+
+/* --- Preview Box --- */
+#previewBox {
+    margin-top: 30px; /* Increased top margin for more separation */
+    padding: 20px;
+    border: 1px dashed #ced4da; /* Dotted/dashed border for preview areas */
+    border-radius: 8px;
+    background-color: #fdfdfe; /* Very light background */
+    min-height: 100px; /* Ensure some height even if empty */
+    display: flex; /* Use flexbox for centering content inside */
+    justify-content: center;
+    align-items: center;
+    color: #6c757d; /* Lighter text color for placeholder or instructions */
+    font-style: italic;
+}
+
+/* --- Responsive Adjustments (Optional but Recommended) --- */
+@media (max-width: 768px) {
+    .container {
+        margin: 40px auto; /* Reduce margin on smaller screens */
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        border-radius: 8px; /* Slightly smaller border-radius */
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    input[type="file"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
